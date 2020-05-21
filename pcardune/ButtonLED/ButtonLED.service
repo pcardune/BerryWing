@@ -1,0 +1,10 @@
+[Unit]
+Description=Button LED
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/pi/programming/BerryWing/pcardune/ButtonLED/ButtonLED.py > /home/pi/programming/BerryWing/pcardune/ButtonLED/ButtonLED.log 2>&1
+
+[Install]
+WantedBy=multi-user.target
